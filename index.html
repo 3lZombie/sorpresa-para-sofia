@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Sofía</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: white;
+            color: black;
+            padding: 20px;
+        }
+        #contenido, #imagen, #mensajeFinal {
+            display: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="inicio">
+        <h2>Hola Sofía, Matteo tiene algo que decirte...</h2>
+        <button onclick="mostrarCarta()">Continuar</button>
+    </div>
+
+    <div id="contenido">
+        <img src="https://i.postimg.cc/28vWtgS0/Screenshot-20250214-081150-Canva.jpg" alt="Carta de Matteo">
+        <br>
+        <button onclick="mostrarMensajeFinal()">Terminar de leer la carta</button>
+    </div>
+
+    <div id="mensajeFinal">
+        <h2>Hola Sofi soy yo, Matteo, que nunca se te olvide que te amo y te quiero mucho, ¿ok?</h2>
+        <p>Siempre estaré para ti y aunque no volvamos a hablar puedes acudir a mí y con todo gusto te apoyaré con lo que necesites. 
+        Abrazos y besos de parte mía y Feliz San Valentín ❤️</p>
+    </div>
+
+    <script>
+        function mostrarCarta() {
+            document.getElementById("inicio").style.display = "none";
+            document.getElementById("contenido").style.display = "block";
+        }
+
+        function mostrarMensajeFinal() {
+            document.getElementById("contenido").style.display = "none";
+            document.getElementById("mensajeFinal").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
